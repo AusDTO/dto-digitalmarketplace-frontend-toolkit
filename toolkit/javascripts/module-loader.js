@@ -20,7 +20,7 @@
       "color:#550; background:yellow; font-size: 11pt",
       "color:yellow; background: #550;font-size:11pt"
     );
-    console.time("Modules loaded");
+    console.timeEnd("Modules loaded");
   }
 
   // Initialise our modules

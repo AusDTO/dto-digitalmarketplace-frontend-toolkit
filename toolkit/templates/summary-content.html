@@ -87,6 +87,16 @@
 {%- endmacro %}
 
 
+{% macro pricing_aud_content(value='', assurance=None) -%}
+  {{ text_content(value, assurance) }}
+{%- endmacro %}
+
+
+{% macro pricing_gbp_content(value='', assurance=None) -%}
+  {{ text_content(value, assurance) }}
+{%- endmacro %}
+
+
 {% macro number_content(value='', assurance=None) -%}
   {{ text_content(value, assurance) }}
 {%- endmacro %}

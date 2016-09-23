@@ -86,7 +86,7 @@
   {% set data = caller() %}
   <td {% if rowspan %}rowspan={{ rowspan }}{% endif %} class="summary-item-field{% if first %}-first{% endif %}{% if first and wide %}-half{% elif first and two_thirds %}-two-thirds{% endif %}{% if action %}-with-action{% endif %}{% if narrow %}-narrow{% endif %}{% if border %}-border{% endif %}{% if className %} {{className}}{% endif %}">
     {% if data %}
-      {% if bold %}<strong>{% endif %}<span>{{ data }}</span>{% if bold %}</strong>{% endif %}
+      {% if bold %}<strong>{% endif %}<span>{{ data.strip() }}</span>{% if bold %}</strong>{% endif %}
     {% endif %}
   </td>
 {%- endmacro %}

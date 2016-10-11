@@ -1,0 +1,16 @@
+<fieldset class="radio-list {% if error %}validation-error{% endif %}" id="{{ name }}">
+  <legend>
+    {{ question }}
+    {% if error %}
+      <span class="validation-message">
+        {{ error }}
+      </span>
+    {% endif %}
+  </legend>
+  {% for option in options %}
+    <div class="radio-list">
+      <input name="{{ option.name }}" value="{{ option._value() }}" id="{{ option._value() }}" type="radio" {% if option.checked %} checked="checked"{% endif %}>
+      <label for="{{ option._value() }}">{{ option.label.text }}</label>
+    </div>
+  {% endfor %}
+</fieldset>

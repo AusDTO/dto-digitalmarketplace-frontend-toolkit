@@ -4,7 +4,7 @@
   </h3>
   {%- for message in messages %}
   <p class="temporary-message-message{% if main %}-main{% endif %}">
-    {{ message|safe }}
+    {{ message }}
   </p>
   {%- endfor %}
 </div>

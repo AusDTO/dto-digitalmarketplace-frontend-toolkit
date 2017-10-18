@@ -74,9 +74,9 @@
         {% if question_advice or hint %}aria-describedby="{{ [question_advice_id, answer_advice_id]|join(' ') }}"{% endif %}
       />
       {% if unit_position == "after" %}
-        <label for="input-{{ name }}" class="text-box-unit">
+        <span class="text-box-unit">
           {{ unit }}
-        </label>
+        </span>
       {% endif %}
     {% endif %}
     {% if hint %}
